@@ -90,13 +90,13 @@ export function DashboardPreview() {
                   <span className="hidden sm:inline">{tab.title}</span>
                   <span className="sm:hidden">{tab.mobileTitle}</span>
 
-                  {/* Sleek Active Tab Progress Bar */}
+                  {/* Sleek Active Tab Progress Bar (50% lighter opacity purple) */}
                   {isSelected && (
-                    <div className="absolute bottom-0 left-2.5 right-2.5 sm:left-3 sm:right-3 h-[2px] bg-slate-200/80 rounded-full overflow-hidden">
+                    <div className="absolute bottom-0 left-2.5 right-2.5 sm:left-3 sm:right-3 h-[2px] bg-slate-200/40 rounded-full overflow-hidden">
                       <div
                         key={`${activeTab}-${isPaused}`}
-                        className={`h-full bg-gradient-to-r from-brand-600 to-purple-600 rounded-full ${
-                          isPaused ? "w-full opacity-70" : "animate-tab-progress"
+                        className={`h-full bg-gradient-to-r from-purple-400/45 to-brand-400/40 rounded-full ${
+                          isPaused ? "w-full opacity-50" : "animate-tab-progress opacity-50"
                         }`}
                       />
                     </div>
