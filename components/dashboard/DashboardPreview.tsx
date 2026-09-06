@@ -7,39 +7,48 @@ import { useLanguage } from "@/context/LanguageContext";
 
 export function DashboardPreview() {
   const [activeTab, setActiveTab] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
   const { language } = useLanguage();
 
   const tabs = [
     {
       id: 0,
       title: language === "BN" ? "মাল্টি-ব্রাঞ্চ স্টক ও সেলস" : "Multi-Branch Stock & Sales",
+      mobileTitle: language === "BN" ? "স্টক ও সেলস" : "Stock & Sales",
       image: "/dashboard-tab-2.png",
       alt: "Bebshadar Multi-Branch Stock and Sales View",
     },
     {
       id: 1,
       title: language === "BN" ? "রিয়েল-টাইম POS বিলিং" : "Real-Time POS Billing",
+      mobileTitle: language === "BN" ? "POS বিলিং" : "POS Billing",
       image: "/dashboard-tab-1.png",
       alt: "Bebshadar Real-Time POS and Overview Dashboard",
     },
     {
       id: 2,
       title: language === "BN" ? "স্বয়ংক্রিয় বাকি ও স্টাফ হিসাব" : "Automated Dues & Staff",
+      mobileTitle: language === "BN" ? "বাকি ও স্টাফ" : "Dues & Staff",
       image: "/dashboard-tab-3.png",
       alt: "Bebshadar User and Dues Management",
     },
   ];
 
-  // Auto-change tab every 4.5 seconds
+  // Auto-change tab every 4.5 seconds (pauses on user hover for comfortable reading)
   useEffect(() => {
+    if (isPaused) return;
     const timer = setInterval(() => {
       setActiveTab((prev) => (prev + 1) % tabs.length);
     }, 4500);
     return () => clearInterval(timer);
-  }, [tabs.length]);
+  }, [isPaused, tabs.length]);
 
   return (
-    <div className="relative w-full max-w-6xl mx-auto flex flex-col items-center pb-0">
+    <div
+      className="relative w-full max-w-6xl mx-auto flex flex-col items-center pb-0 group/preview"
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
+    >
       {/* 1. BACKGROUND BANNER (Full Tall Presence matching max-w-6xl) */}
       <div className="w-full h-[360px] sm:h-[560px] lg:h-[620px] rounded-[24px] sm:rounded-[36px] overflow-hidden relative shadow-sm border border-slate-200/50">
         {/* Banner Background Image */}
@@ -62,10 +71,10 @@ export function DashboardPreview() {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1 sm:py-1.5 rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 ${
+                  className={`relative flex items-center gap-1 sm:gap-2 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 overflow-hidden ${
                     isSelected
-                      ? "text-navy-950 font-bold bg-slate-50/80"
-                      : "text-slate-500 hover:text-navy-950 hover:bg-slate-50/40 font-medium"
+                      ? "text-navy-950 font-bold bg-slate-100/90 shadow-2xs"
+                      : "text-slate-500 hover:text-navy-950 hover:bg-slate-50/60 font-medium"
                   }`}
                 >
                   {/* Selected checkmark with black circular background */}
@@ -76,7 +85,22 @@ export function DashboardPreview() {
                   ) : (
                     <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-slate-300 shrink-0" />
                   )}
-                  <span>{tab.title}</span>
+
+                  {/* Responsive Tab Label: Full on desktop, compact on mobile */}
+                  <span className="hidden sm:inline">{tab.title}</span>
+                  <span className="sm:hidden">{tab.mobileTitle}</span>
+
+                  {/* Sleek Active Tab Progress Bar */}
+                  {isSelected && (
+                    <div className="absolute bottom-0 left-2.5 right-2.5 sm:left-3 sm:right-3 h-[2px] bg-slate-200/80 rounded-full overflow-hidden">
+                      <div
+                        key={`${activeTab}-${isPaused}`}
+                        className={`h-full bg-gradient-to-r from-brand-600 to-purple-600 rounded-full ${
+                          isPaused ? "w-full opacity-70" : "animate-tab-progress"
+                        }`}
+                      />
+                    </div>
+                  )}
                 </button>
               );
             })}

@@ -203,6 +203,19 @@ h1, h2, h3, h4, h5, h6 {
   animation: heroAurora 9s ease-in-out infinite;
 }
 
+@keyframes tabProgressBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.animate-tab-progress {
+  animation: tabProgressBar 4.5s linear forwards;
+}
+
 /* ==========================================================================
    TrustBar Section Opening Entrance Keyframes
    ========================================================================== */

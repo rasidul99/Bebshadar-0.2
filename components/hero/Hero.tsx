@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Check } from "lucide-react";
 import { DashboardPreview } from "@/components/dashboard/DashboardPreview";
 import { AnimatedWave } from "@/components/hero/AnimatedWave";
 import { useLanguage } from "@/context/LanguageContext";
@@ -36,6 +37,7 @@ export function Hero() {
       subtitleLine2: "into a single dashboard \u2014 so you always know where your business stands.",
       ctaPrimary: "Start 14-Day Free Trial",
       ctaSecondary: "Watch 2-Min Demo",
+      trustBadge: "No credit card required • 2-min instant setup",
     },
     BN: {
       headlineLine1: "একটিমাত্র সিস্টেমে চালান পুরো ব্যবসা \u2014",
@@ -44,6 +46,7 @@ export function Hero() {
       subtitleLine2: "যাতে যেকোনো সময় নির্ভুলভাবে জানতে পারেন আপনার ব্যবসার সার্বিক অবস্থান।",
       ctaPrimary: "১৪ দিনের ফ্রি ট্রায়াল শুরু করুন",
       ctaSecondary: "২ মিনিটের ডেমো দেখুন",
+      trustBadge: "কোনো ক্রেডিট কার্ড প্রয়োজন নেই • ২ মিনিটে ফ্রি সেটআপ",
     },
   };
 
@@ -103,6 +106,14 @@ export function Hero() {
             >
               <span>{t.ctaSecondary}</span>
             </a>
+          </div>
+
+          {/* Trust & Friction-Reducer Micro-Badge */}
+          <div className="flex items-center justify-center gap-1.5 sm:gap-2 text-[12px] sm:text-[13px] text-slate-500 font-medium select-none animate-hero-fade-3 pt-0.5">
+            <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
+              <Check className="w-2.5 h-2.5 stroke-[3]" />
+            </span>
+            <span>{t.trustBadge}</span>
           </div>
         </div>
 
