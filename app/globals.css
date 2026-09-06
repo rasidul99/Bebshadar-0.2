@@ -1,0 +1,496 @@
+@import url('https://fonts.maateen.me/ador-noirrit/font.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 260 61% 45%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222 47% 11.2%;
+    --muted: 215 16% 47%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 174 84% 31%;
+    --accent-foreground: 222 47% 11.2%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 260 61% 45%;
+    --radius: 0.875rem;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #F7F9FC;
+  color: #0F172A;
+  font-family: 'Li Ador Noirrit', 'Ador Noirrit', var(--font-hind-siliguri), var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Li Ador Noirrit', 'Ador Noirrit', var(--font-hind-siliguri), var(--font-plus-jakarta-sans), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F1F5F9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Glass & Glow utilities */
+.glass-nav {
+  background: rgba(247, 249, 252, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.subtle-grid {
+  background-size: 32px 32px;
+  background-image: 
+    linear-gradient(to right, rgba(91, 45, 184, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(91, 45, 184, 0.04) 1px, transparent 1px);
+}
+
+.gradient-mesh {
+  background: radial-gradient(circle at 15% 15%, rgba(91, 45, 184, 0.08) 0%, transparent 45%),
+              radial-gradient(circle at 85% 25%, rgba(13, 148, 136, 0.07) 0%, transparent 40%),
+              radial-gradient(circle at 50% 80%, rgba(245, 158, 11, 0.05) 0%, transparent 50%);
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Looping SVG Path Stroke Line Draw Animation */
+@keyframes iconStrokeLoop {
+  0% {
+    stroke-dasharray: 45;
+    stroke-dashoffset: 45;
+  }
+  50% {
+    stroke-dasharray: 45;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dasharray: 45;
+    stroke-dashoffset: -45;
+  }
+}
+
+.icon-stroke-loop svg path,
+.icon-stroke-loop svg line,
+.icon-stroke-loop svg circle,
+.icon-stroke-loop svg rect,
+.icon-stroke-loop svg polyline,
+.icon-stroke-loop svg polygon {
+  stroke-dasharray: 45;
+  stroke-dashoffset: 0;
+  animation: iconStrokeLoop 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Shorter & Silky Smooth Continuous Traveling Purple Beam */
+@keyframes pipelineBeam {
+  0% {
+    stroke-dashoffset: 1060;
+  }
+  100% {
+    stroke-dashoffset: -60;
+  }
+}
+
+.animate-pipeline-beam {
+  stroke-dasharray: 55 1065;
+  animation: pipelineBeam 5s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* ==========================================================================
+   Hero Section Opening Entrance Keyframes & Staggered Reveals
+   ========================================================================== */
+@keyframes heroFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.985);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes heroDashboardReveal {
+  0% {
+    opacity: 0;
+    transform: perspective(1200px) rotateX(10deg) translateY(42px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: perspective(1200px) rotateX(0deg) translateY(0) scale(1);
+  }
+}
+
+@keyframes heroAurora {
+  0%, 100% {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 0.45;
+  }
+  50% {
+    transform: translate(-50%, -10px) scale(1.1);
+    opacity: 0.65;
+  }
+}
+
+.animate-hero-fade-1 {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.08s both;
+}
+
+.animate-hero-fade-2 {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-hero-fade-3 {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+
+.animate-hero-dashboard {
+  animation: heroDashboardReveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+.animate-hero-aurora {
+  animation: heroAurora 9s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   TrustBar Section Opening Entrance Keyframes
+   ========================================================================== */
+@keyframes trustFadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes trustMarqueeReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(22px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-trust-heading {
+  animation: trustFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+.animate-trust-marquee {
+  animation: trustMarqueeReveal 1s cubic-bezier(0.16, 1, 0.3, 1) 0.8s both;
+}
+
+/* ==========================================================================
+   ProblemSection (Traditional Bottlenecks) Opening Entrance Keyframes
+   ========================================================================== */
+@keyframes problemCardFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-problem-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-problem-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.animate-problem-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+
+.animate-problem-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.44s both;
+}
+
+.animate-problem-card-4 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.56s both;
+}
+
+.animate-problem-highlight {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.68s both;
+}
+
+/* ==========================================================================
+   Core Capabilities (FeaturesGrid) Opening Entrance Keyframes
+   ========================================================================== */
+.animate-features-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-feature-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.18s both;
+}
+
+.animate-feature-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+
+.animate-feature-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
+
+.animate-feature-card-4 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.48s both;
+}
+
+.animate-feature-card-5 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.58s both;
+}
+
+.animate-feature-card-6 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.68s both;
+}
+
+/* ==========================================================================
+   Specialized Power Modules Opening Entrance Keyframes
+   ========================================================================== */
+.animate-modules-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-module-card-1 {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.animate-module-card-2 {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
+
+.animate-module-card-3 {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.54s both;
+}
+
+/* ==========================================================================
+   Interactive Demo (ProductDemo) Opening Entrance Keyframes
+   ========================================================================== */
+.animate-demo-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-demo-frame {
+  animation: heroDashboardReveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+/* ==========================================================================
+   Industry Specific Solutions Opening Entrance Keyframes
+   ========================================================================== */
+.animate-industries-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-industry-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+.animate-industry-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+.animate-industry-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.29s both;
+}
+.animate-industry-card-4 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+.animate-industry-card-5 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.43s both;
+}
+.animate-industry-card-6 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both;
+}
+.animate-industry-card-7 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.57s both;
+}
+.animate-industry-card-8 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.64s both;
+}
+
+/* ==========================================================================
+   Fast Onboarding (HowItWorks) Opening Entrance Keyframes
+   ========================================================================== */
+.animate-onboarding-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-onboarding-pipeline {
+  animation: heroFadeUp 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.animate-step-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+.animate-step-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.36s both;
+}
+.animate-step-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.50s both;
+}
+.animate-step-card-4 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.64s both;
+}
+
+/* ==========================================================================
+   Testimonials (Real Owner Feedback) Opening Entrance Keyframes
+   ========================================================================== */
+.animate-testimonials-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-testimonials-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+.animate-testimonials-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+.animate-testimonials-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.35s both;
+}
+.animate-testimonials-card-4 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.45s both;
+}
+.animate-testimonials-card-5 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.55s both;
+}
+.animate-testimonials-card-6 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.65s both;
+}
+
+/* ==========================================================================
+   Pricing Section Opening Entrance Keyframes
+   ========================================================================== */
+.animate-pricing-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-pricing-toggle {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.2s both;
+}
+
+.animate-pricing-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+.animate-pricing-card-2 {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.38s both;
+}
+.animate-pricing-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.5s both;
+}
+
+/* ==========================================================================
+   FAQ Section Opening Entrance Keyframes
+   ========================================================================== */
+.animate-faq-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-faq-list {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+/* ==========================================================================
+   Final CTA Opening Entrance Keyframes
+   ========================================================================== */
+.animate-final-cta {
+  animation: heroDashboardReveal 1.05s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+
+/* ==========================================================================
+   Blog Section Opening Entrance Keyframes
+   ========================================================================== */
+.animate-blog-header {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-blog-card-1 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.15s both;
+}
+.animate-blog-card-2 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+.animate-blog-card-3 {
+  animation: problemCardFadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.41s both;
+}
+
+/* ==========================================================================
+   Contact / Level Up Section Opening Entrance Keyframes
+   ========================================================================== */
+.animate-contact-left {
+  animation: heroFadeUp 0.85s cubic-bezier(0.16, 1, 0.3, 1) 0.1s both;
+}
+
+.animate-contact-card {
+  animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
+}
+
+
+
+
+
+
+
+
+
+
+
