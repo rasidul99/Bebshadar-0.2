@@ -421,64 +421,73 @@ export function PricingSection() {
           })}
         </div>
 
-        {/* Highlighted Trust & Stats Banner (Flipped: Blue to Purple Vertical Gradient) */}
+        {/* Highlighted Trust & Stats Banner (Senior UI/UX Redesign: Deep Royal Chromatic Gradient with Layered Lighting & Specular Glass) */}
         <div
-          className={`mt-10 sm:mt-16 rounded-2xl sm:rounded-3xl bg-gradient-to-b from-[#2563EB] via-[#5052F5] to-[#7B3FE4] text-white p-5 sm:p-8 lg:py-9 lg:px-10 shadow-[0_22px_50px_-10px_rgba(37,99,235,0.35)] border border-white/20 relative overflow-hidden ${
+          className={`mt-10 sm:mt-16 rounded-2xl sm:rounded-3xl bg-[linear-gradient(130deg,#151B4C_0%,#231966_32%,#431883_68%,#631E9C_100%)] text-white p-6 sm:p-9 lg:py-10 lg:px-12 shadow-[0_24px_55px_-12px_rgba(21,27,76,0.4),0_0_1px_1px_rgba(255,255,255,0.15),inset_0_1px_1.5px_rgba(255,255,255,0.35)] border border-white/15 relative overflow-hidden transition-all duration-300 hover:shadow-[0_28px_65px_-10px_rgba(99,102,241,0.3)] ${
             isInView ? "animate-pricing-toggle" : "opacity-0"
           }`}
         >
-          {/* Pixel-Perfect Curved Arc Shape in Background (Exact match with reference image) */}
-          <div className="absolute right-0 bottom-0 top-0 w-[240px] sm:w-[340px] pointer-events-none overflow-hidden select-none">
+          {/* Layer 1: Ambient Top-Left Specular Light Aurora */}
+          <div className="absolute -top-32 left-1/4 w-[500px] h-[220px] bg-[radial-gradient(ellipse_at_center,rgba(167,139,250,0.22),transparent_70%)] pointer-events-none" />
+
+          {/* Layer 2: Ambient Bottom-Right Glow Orb */}
+          <div className="absolute -bottom-24 -right-16 w-[360px] h-[360px] bg-[radial-gradient(circle,rgba(124,58,237,0.32),transparent_70%)] pointer-events-none" />
+
+          {/* Layer 3: High-Precision Concentric Celestial Orbit Rings (Replacing thick SVG) */}
+          <div className="absolute right-0 bottom-0 top-0 w-[260px] sm:w-[380px] pointer-events-none overflow-hidden select-none">
             <svg
-              className="absolute right-0 bottom-0 w-[260px] sm:w-[320px] h-[200px] sm:h-[220px] pointer-events-none"
-              viewBox="0 0 320 220"
+              className="absolute right-0 bottom-0 w-[280px] sm:w-[380px] h-[200px] sm:h-[240px] pointer-events-none opacity-45"
+              viewBox="0 0 380 240"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              {/* Outer soft ambient glow */}
-              <circle
-                cx="250"
-                cy="230"
-                r="160"
-                stroke="white"
-                strokeOpacity="0.06"
-                strokeWidth="70"
-              />
-              {/* Main solid curved band matching reference image */}
-              <circle
-                cx="250"
-                cy="230"
-                r="140"
-                stroke="white"
-                strokeOpacity="0.16"
-                strokeWidth="48"
-              />
+              <circle cx="330" cy="240" r="210" stroke="url(#pricingOrbit1)" strokeWidth="1" strokeDasharray="4 4" />
+              <circle cx="330" cy="240" r="160" stroke="url(#pricingOrbit2)" strokeWidth="1.2" />
+              <circle cx="330" cy="240" r="110" stroke="url(#pricingOrbit1)" strokeWidth="1" />
+              <circle cx="330" cy="240" r="60" stroke="url(#pricingOrbit2)" strokeWidth="1.5" />
+              <circle cx="330" cy="240" r="28" fill="url(#pricingCoreGlow)" opacity="0.5" />
+              <defs>
+                <linearGradient id="pricingOrbit1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#FFFFFF" stopOpacity="0.45" />
+                  <stop offset="100%" stopColor="#8B5CF6" stopOpacity="0.05" />
+                </linearGradient>
+                <linearGradient id="pricingOrbit2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#A78BFA" stopOpacity="0.65" />
+                  <stop offset="100%" stopColor="#6366F1" stopOpacity="0.1" />
+                </linearGradient>
+                <radialGradient id="pricingCoreGlow">
+                  <stop offset="0%" stopColor="#C4B5FD" stopOpacity="0.7" />
+                  <stop offset="100%" stopColor="#7C3AED" stopOpacity="0" />
+                </radialGradient>
+              </defs>
             </svg>
           </div>
 
-          {/* 2 Rows & 2 Columns Grid on Mobile, 4 Columns on Desktop */}
+          {/* 2 Rows & 2 Columns Grid on Mobile, 4 Columns on Desktop with Clean Translucent Separators */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-0 relative z-10 w-full">
             {t.assurances.map((item, idx) => {
               const borderStyles = [
                 // 1. Top-Left on mobile | 1st Col on desktop
-                "border-r border-b border-dashed border-white/20 pr-3.5 pb-4 sm:pr-6 sm:pb-6 lg:border-b-0 lg:pb-0 lg:pl-0 lg:pr-6 xl:pr-8",
+                "border-r border-b border-white/[0.12] pr-4 pb-5 sm:pr-8 sm:pb-7 lg:border-b-0 lg:pb-0 lg:pl-0 lg:pr-7 xl:pr-9",
                 // 2. Top-Right on mobile | 2nd Col on desktop
-                "border-b border-dashed border-white/20 pl-3.5 pb-4 sm:pl-6 sm:pb-6 lg:border-b-0 lg:pb-0 lg:pl-6 xl:pl-8 lg:border-r lg:pr-6 xl:pr-8",
+                "border-b border-white/[0.12] pl-4 pb-5 sm:pl-8 sm:pb-7 lg:border-b-0 lg:pb-0 lg:pl-7 xl:pl-9 lg:border-r lg:pr-7 xl:pr-9",
                 // 3. Bottom-Left on mobile | 3rd Col on desktop
-                "border-r border-dashed border-white/20 pr-3.5 pt-4 sm:pr-6 sm:pt-6 lg:pt-0 lg:pl-6 xl:pl-8 lg:border-r lg:pr-6 xl:pr-8",
+                "border-r border-white/[0.12] pr-4 pt-5 sm:pr-8 sm:pt-7 lg:pt-0 lg:pl-7 xl:pl-9 lg:border-r lg:pr-7 xl:pr-9",
                 // 4. Bottom-Right on mobile | 4th Col on desktop
-                "pl-3.5 pt-4 sm:pl-6 sm:pt-6 lg:pt-0 lg:pl-6 xl:pl-8 lg:border-none",
+                "pl-4 pt-5 sm:pl-8 sm:pt-7 lg:pt-0 lg:pl-7 xl:pl-9 lg:border-none",
               ];
 
               return (
                 <div
                   key={idx}
-                  className={`text-left flex flex-col justify-start ${borderStyles[idx] || ""}`}
+                  className={`text-left flex flex-col justify-start group/stat ${borderStyles[idx] || ""}`}
                 >
-                  <div className="text-[22px] sm:text-3xl lg:text-[38px] font-extrabold text-white tracking-tight leading-none mb-1.5 sm:mb-2.5 drop-shadow-xs">
+                  {/* Stat Number with Subtle Specular Gradient */}
+                  <div className="text-[24px] sm:text-3xl lg:text-[40px] font-black tracking-tight leading-none mb-1.5 sm:mb-2.5 bg-gradient-to-b from-white via-white to-white/85 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover/stat:scale-[1.02] origin-left">
                     {item.stat}
                   </div>
-                  <p className="text-[11px] sm:text-[13.5px] text-white/90 font-medium leading-snug sm:leading-relaxed">
+                  {/* Description with High-Legibility Contrast */}
+                  <p className="text-[11.5px] sm:text-[13.5px] text-purple-100/85 font-medium leading-snug sm:leading-relaxed">
                     {item.desc}
                   </p>
                 </div>
