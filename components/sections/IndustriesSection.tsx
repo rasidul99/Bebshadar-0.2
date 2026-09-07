@@ -18,41 +18,57 @@ export function IndustriesSection() {
       industries: [
         {
           image: "/Section 6 icons/Grocery.png",
+          width: 500,
+          height: 500,
           title: "Grocery Stores & Supershops",
           desc: "Barcode scanning, scale integration, expiry alerts, and multi-counter POS billing.",
         },
         {
           image: "/Section 6 icons/Pharmacies.png",
+          width: 500,
+          height: 500,
           title: "Pharmacies & Drugstores",
           desc: "Batch number lookup, expiry tracking, doctor prescription, and license records.",
         },
         {
           image: "/Section 6 icons/Restaurants.png",
+          width: 500,
+          height: 500,
           title: "Restaurants & Bakeries",
           desc: "KOT kitchen display, table order billing, recipe costing, and takeaway parcels.",
         },
         {
           image: "/Section 6 icons/Auto Parts.png",
+          width: 500,
+          height: 500,
           title: "Auto Parts & Garages",
           desc: "Part serial tracking, vehicle fitment search, mechanic job cards, and invoices.",
         },
         {
           image: "/Section 6 icons/Electronics.png",
+          width: 560,
+          height: 500,
           title: "Electronics & Repair Shops",
           desc: "IMEI warranty lookup, digital service tickets, technician jobs, and accessories.",
         },
         {
           image: "/Section 6 icons/Manufacturing.png",
+          width: 560,
+          height: 500,
           title: "Manufacturing & Wholesale",
           desc: "Raw material buying, batch recipe tracking, bulk carton packing, and credit dues.",
         },
         {
           image: "/Section 6 icons/Multi-Branch.png",
+          width: 684,
+          height: 500,
           title: "Multi-Branch Retail Chains",
           desc: "Central catalog, branch stock requisitions, staff access roles, and analytics.",
         },
         {
           image: "/Section 6 icons/Online & Offline Brands.png",
+          width: 684,
+          height: 500,
           title: "Online & Offline Brands",
           desc: "WooCommerce store sync, courier parcel tracking, inventory updates, and orders.",
         },
@@ -66,41 +82,57 @@ export function IndustriesSection() {
       industries: [
         {
           image: "/Section 6 icons/Grocery.png",
+          width: 500,
+          height: 500,
           title: "মুদি দোকান ও সুপারশপ",
           desc: "বারকোড স্ক্যানিং, ডিজিটাল ওজন স্কেল সংযোগ, মেয়াদোত্তীর্ণ এলার্ট এবং মাল্টি-কাউন্টার দ্রুত বিলিং।",
         },
         {
           image: "/Section 6 icons/Pharmacies.png",
+          width: 500,
+          height: 500,
           title: "ফার্মেসি ও ড্রাগস্টোর",
           desc: "ওষুধের ব্যাচ নম্বর ও মেয়াদ ট্র্যাকিং, ডাক্তারের প্রেসক্রিপশন ভিউ এবং সরকার-নির্ধারিত লাইসেন্স রেকর্ড।",
         },
         {
           image: "/Section 6 icons/Restaurants.png",
+          width: 500,
+          height: 500,
           title: "রেস্টুরেন্ট ও বেকারি",
           desc: "কিচেন KOT ডিসপ্লে, টেবিল অর্ডার ম্যানেজমেন্ট, আইটেম রেসিপি খরচ এবং দ্রুত পার্সেল বিলিং।",
         },
         {
           image: "/Section 6 icons/Auto Parts.png",
+          width: 500,
+          height: 500,
           title: "অটো পার্টস ও গ্যারেজ",
           desc: "যন্ত্রাংশের সিরিয়াল/SKU ট্র্যাকিং, গাড়ি ফিটমেন্ট সার্চ, মেকানিক জব কার্ড ও সার্ভিস ইনভয়েস।",
         },
         {
           image: "/Section 6 icons/Electronics.png",
+          width: 560,
+          height: 500,
           title: "ইলেকট্রনিক্স ও মোবাইল শপ",
           desc: "IMEI ও ওয়ারেন্টি সার্চ, ডিজিটাল সার্ভিস টিকিট, টেকনিশিয়ান কাজ এবং এক্সেসরিজ ম্যানেজমেন্ট।",
         },
         {
           image: "/Section 6 icons/Manufacturing.png",
+          width: 560,
+          height: 500,
           title: "ম্যানুফ্যাকচারিং ও পাইকারি ব্যবসা",
           desc: "কাঁচামাল ক্রয়, ব্যাচ উৎপাদন রেসিপি (BOM), কার্টুন প্যাকিং এবং পাইকারি বাকির খাতা।",
         },
         {
           image: "/Section 6 icons/Multi-Branch.png",
+          width: 684,
+          height: 500,
           title: "মাল্টি-আউটলেট রিটেইল চেইন",
           desc: "সেন্ট্রাল ক্যাটালগ, ইন্টার-ব্রাঞ্চ স্টক রিকুইজিশন, স্টাফ রোল কন্ট্রোল এবং সেন্ট্রাল সেলস রিপোর্ট।",
         },
         {
           image: "/Section 6 icons/Online & Offline Brands.png",
+          width: 684,
+          height: 500,
           title: "অনলাইন ও অফলাইন শপ",
           desc: "WooCommerce ওয়েবসাইট সিঙ্ক, কুরিয়ার পার্সেল ট্র্যাকিং, স্বয়ংক্রিয় স্টক আপডেট এবং অর্ডার প্রসেসিং।",
         },
@@ -151,16 +183,15 @@ export function IndustriesSection() {
                 className={`p-3.5 sm:p-7 rounded-[18px] sm:rounded-3xl border border-slate-800/90 bg-[#12192B]/95 hover:bg-[#16213A] hover:border-brand-500/50 flex flex-col justify-between h-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_-15px_rgba(112,72,232,0.25)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${animClass}`}
               >
                 <div className="flex flex-col flex-1">
-                  {/* High-Resolution PNG Industry Icon */}
-                  <div className="mb-3 sm:mb-6 flex justify-start">
-                    <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] transition-transform duration-300 group-hover:scale-110">
-                      <Image
-                        src={ind.image}
-                        alt={ind.title}
-                        fill
-                        className="object-contain object-left"
-                      />
-                    </div>
+                  {/* High-Resolution PNG Industry Icon (Uniform Height Across All Cards) */}
+                  <div className="mb-3 sm:mb-6 h-12 sm:h-16 lg:h-[72px] flex items-center justify-start">
+                    <Image
+                      src={ind.image}
+                      alt={ind.title}
+                      width={ind.width}
+                      height={ind.height}
+                      className="h-12 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform duration-300 origin-left group-hover:scale-110"
+                    />
                   </div>
 
                   {/* Equal-height Title Container */}
