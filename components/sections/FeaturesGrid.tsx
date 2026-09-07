@@ -138,9 +138,9 @@ export function FeaturesGrid() {
                 hoverEffect
                 className={`p-3.5 sm:p-9 rounded-[20px] sm:rounded-[32px] min-h-[210px] sm:min-h-[280px] flex flex-col justify-start border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 group ${animClass}`}
               >
-                {/* 2X Enlarged Left-Aligned High-Resolution PNG Icon */}
+                {/* Large Left-Aligned High-Resolution PNG Icon (Scaled 1.5x) */}
                 <div className="mb-3 sm:mb-6 flex justify-start">
-                  <div className="relative w-20 h-20 sm:w-32 sm:h-32 lg:w-36 lg:h-36 transition-transform duration-300 group-hover:scale-105">
+                  <div className="relative w-[56px] h-[56px] sm:w-24 sm:h-24 lg:w-[108px] lg:h-[108px] transition-transform duration-300 group-hover:scale-105">
                     <Image
                       src={iconPath}
                       alt={feature.title}
