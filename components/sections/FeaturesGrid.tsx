@@ -2,7 +2,6 @@
 
 import React from "react";
 import Image from "next/image";
-import { Card } from "@/components/ui/Card";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
 
@@ -133,31 +132,40 @@ export function FeaturesGrid() {
             const animClass = isInView ? `animate-feature-card-${idx + 1}` : "opacity-0";
 
             return (
-              <Card
+              <div
                 key={idx}
-                hoverEffect
-                className={`p-3.5 sm:p-9 rounded-[20px] sm:rounded-[32px] min-h-[210px] sm:min-h-[280px] flex flex-col justify-start border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 group ${animClass}`}
+                className={`relative p-[1.5px] rounded-[20px] sm:rounded-[32px] overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-12px_rgba(112,72,232,0.2)] flex flex-col justify-start min-h-[210px] sm:min-h-[280px] ${animClass}`}
               >
-                {/* Large Left-Aligned High-Resolution PNG Icon (Scaled 1.5x) */}
-                <div className="mb-3 sm:mb-6 flex justify-start">
-                  <div className="relative w-[56px] h-[56px] sm:w-24 sm:h-24 lg:w-[108px] lg:h-[108px] transition-transform duration-300 group-hover:scale-105">
-                    <Image
-                      src={iconPath}
-                      alt={feature.title}
-                      fill
-                      className="object-contain object-left"
-                    />
-                  </div>
-                </div>
+                {/* Default static border */}
+                <div className="absolute inset-0 rounded-[20px] sm:rounded-[32px] border border-slate-200/80 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
 
-                {/* Title & Description with spacious typographic hierarchy */}
-                <h3 className="text-[14px] sm:text-[22px] font-bold text-navy-900 mb-1.5 sm:mb-3 tracking-tight text-left leading-snug transition-all duration-300">
-                  {feature.title}
-                </h3>
-                <p className="text-slate-600 text-[11px] sm:text-base leading-relaxed text-left transition-all duration-300">
-                  {feature.description}
-                </p>
-              </Card>
+                {/* Animated Rotating Glowing Border Outline on Hover (Dual Layer: Ambient Glow + Sharp Beam) */}
+                <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#8E65FF_345deg,#5F2BEA_360deg)] opacity-0 group-hover:opacity-60 blur-[6px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
+                <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#8E65FF_345deg,#5F2BEA_360deg)] opacity-0 group-hover:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
+
+                {/* Inner Card Body with crisp white background */}
+                <div className="relative z-10 w-full h-full rounded-[18.5px] sm:rounded-[30.5px] bg-white p-3.5 sm:p-9 flex flex-col justify-start shadow-[0_4px_20px_rgba(0,0,0,0.03)] transition-all duration-300">
+                  {/* Large Left-Aligned High-Resolution PNG Icon (Scaled 1.5x) */}
+                  <div className="mb-3 sm:mb-6 flex justify-start">
+                    <div className="relative w-[56px] h-[56px] sm:w-24 sm:h-24 lg:w-[108px] lg:h-[108px] transition-transform duration-300 group-hover:scale-105">
+                      <Image
+                        src={iconPath}
+                        alt={feature.title}
+                        fill
+                        className="object-contain object-left"
+                      />
+                    </div>
+                  </div>
+
+                  {/* Title & Description with spacious typographic hierarchy */}
+                  <h3 className="text-[14px] sm:text-[22px] font-bold text-navy-900 mb-1.5 sm:mb-3 tracking-tight text-left leading-snug group-hover:text-brand-600 transition-colors duration-300">
+                    {feature.title}
+                  </h3>
+                  <p className="text-slate-600 text-[11px] sm:text-base leading-relaxed text-left transition-all duration-300">
+                    {feature.description}
+                  </p>
+                </div>
+              </div>
             );
           })}
         </div>

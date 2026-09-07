@@ -142,278 +142,218 @@ export function SpecializedModules() {
           
           {/* STACKED CARD 1: Manufacturing & Production (Scroll Triggered) */}
           <div className={`sticky top-20 sm:top-28 z-10 transition-all duration-300 w-full ${isInView ? "animate-module-card-1" : "opacity-0"}`}>
-            <div className="relative p-[2px] rounded-[24px] sm:rounded-[44px] overflow-hidden group cursor-pointer transition-all duration-300 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_-15px_rgba(112,72,232,0.25)]">
-              {/* Default static border */}
-              <div className="absolute inset-0 rounded-[24px] sm:rounded-[44px] border border-slate-200/90 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
+            <div className="w-full bg-white rounded-[24px] sm:rounded-[44px] border border-slate-200/90 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
+              
+              {/* Left Column: Text & Features */}
+              <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left">
+                <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
+                  {t.cards[0].title}
+                </h3>
 
-              {/* Animated Rotating Glowing Border Outline on Hover (Dual Layer: Ambient Glow + Sharp Beam) */}
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-80 blur-[8px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
+                <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
+                  {t.cards[0].description}
+                </p>
 
-              {/* Inner White Card */}
-              <div className="relative z-10 w-full bg-white rounded-[22px] sm:rounded-[42px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
-                
-                {/* Left Column: Text & Features */}
-                <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left">
-                  <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
-                    {t.cards[0].title}
-                  </h3>
+                <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
+                  {t.cards[0].features.map((feat, i) => (
+                    <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-                  <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
-                    {t.cards[0].description}
-                  </p>
-
-                  <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
-                    {t.cards[0].features.map((feat, i) => (
-                      <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
-                        <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
+              {/* Right Column: Background fgsdf.png + Floating Purple UI Mockup Card */}
+              <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/fgsdf.png"
+                    alt="Manufacturing Background"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
 
-                {/* Right Column: Background fgsdf.png + Floating Purple UI Mockup Card */}
-                <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden">
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src="/fgsdf.png"
-                      alt="Manufacturing Background"
-                      fill
-                      className="object-cover object-center"
-                      priority
-                    />
+                {/* Floating BOM Recipe Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
+                    <span className="font-bold text-brand-700 flex items-center gap-1.5">
+                      <Cpu className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
+                      BOM RECIPE BUILDER
+                    </span>
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border border-brand-200/60 shadow-xs">
+                      Batch #802
+                    </span>
                   </div>
 
-                  {/* Floating BOM Recipe Card in Purple Theme (80% Foggy Blur Glassmorphism + Hover Outline Animation) */}
-                  <div className="relative p-[1.5px] rounded-2xl sm:rounded-3xl overflow-hidden group/floating cursor-pointer transition-all duration-300 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-12px_rgba(112,72,232,0.35)] z-10 w-full max-w-[320px] sm:max-w-[410px]">
-                    {/* Default static border */}
-                    <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-white group-hover/floating:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
-
-                    {/* Animated Rotating Glowing Border Outline on Hover */}
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-80 blur-[4px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-
-                    {/* Inner Card Content */}
-                    <div className="relative z-10 w-full h-full rounded-[14.5px] sm:rounded-[22.5px] bg-white/80 hover:bg-white/85 backdrop-blur-xl p-3.5 sm:p-6 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
-                        <span className="font-bold text-brand-700 flex items-center gap-1.5">
-                          <Cpu className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
-                          BOM RECIPE BUILDER
-                        </span>
-                        <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border border-brand-200/60 shadow-xs">
-                          Batch #802
-                        </span>
-                      </div>
-
-                      <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
-                        <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
-                          <span className="text-slate-800 font-medium">Flour (ময়দা) 50kg</span>
-                          <span className="text-rose-600 font-bold font-mono">-50.00</span>
-                        </div>
-                        <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
-                          <span className="text-slate-800 font-medium">Sugar (চিনি) 10kg</span>
-                          <span className="text-rose-600 font-bold font-mono">-10.00</span>
-                        </div>
-                      </div>
-
-                      <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
-                        <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
-                          <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300" />
-                          <span>Finished: 100 Pcs Bakery Pack</span>
-                        </div>
-                        <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto In Stock</span>
-                      </div>
+                  <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
+                    <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
+                      <span className="text-slate-800 font-medium">Flour (ময়দা) 50kg</span>
+                      <span className="text-rose-600 font-bold font-mono">-50.00</span>
+                    </div>
+                    <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
+                      <span className="text-slate-800 font-medium">Sugar (চিনি) 10kg</span>
+                      <span className="text-rose-600 font-bold font-mono">-10.00</span>
                     </div>
                   </div>
-                </div>
 
+                  <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
+                      <Sparkles className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-amber-300" />
+                      <span>Finished: 100 Pcs Bakery Pack</span>
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto In Stock</span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
           {/* STACKED CARD 2: Repair & Service Job Tracking (Scroll Triggered) */}
           <div className={`sticky top-24 sm:top-32 z-20 transition-all duration-300 w-full ${isInView ? "animate-module-card-2" : "opacity-0"}`}>
-            <div className="relative p-[2px] rounded-[24px] sm:rounded-[44px] overflow-hidden group cursor-pointer transition-all duration-300 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] hover:shadow-[0_25px_60px_-15px_rgba(112,72,232,0.25)]">
-              {/* Default static border */}
-              <div className="absolute inset-0 rounded-[24px] sm:rounded-[44px] border border-slate-200/90 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
+            <div className="w-full bg-white rounded-[24px] sm:rounded-[44px] border border-slate-200/90 shadow-[0_20px_50px_-15px_rgba(0,0,0,0.08)] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
+              
+              {/* Left Column (REVERSED): Background sfbcb.png + Floating Purple UI Mockup Card */}
+              <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden order-2 lg:order-1">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/sfbcb.png"
+                    alt="Repair Job Background"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
+                </div>
 
-              {/* Animated Rotating Glowing Border Outline on Hover (Dual Layer: Ambient Glow + Sharp Beam) */}
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-80 blur-[8px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-
-              {/* Inner White Card */}
-              <div className="relative z-10 w-full bg-white rounded-[22px] sm:rounded-[42px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
-                
-                {/* Left Column (REVERSED): Background sfbcb.png + Floating Purple UI Mockup Card */}
-                <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden order-2 lg:order-1">
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src="/sfbcb.png"
-                      alt="Repair Job Background"
-                      fill
-                      className="object-cover object-center"
-                      priority
-                    />
+                {/* Floating Repair Ticket Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
+                    <span className="font-bold text-brand-700 flex items-center gap-1.5">
+                      <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
+                      JOB TICKET #TK-4409
+                    </span>
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
+                      <Clock className="w-3 h-3" />
+                      In Progress
+                    </span>
                   </div>
 
-                  {/* Floating Repair Ticket Card in Purple Theme (80% Foggy Blur Glassmorphism + Hover Outline Animation) */}
-                  <div className="relative p-[1.5px] rounded-2xl sm:rounded-3xl overflow-hidden group/floating cursor-pointer transition-all duration-300 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-12px_rgba(112,72,232,0.35)] z-10 w-full max-w-[320px] sm:max-w-[410px]">
-                    {/* Default static border */}
-                    <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-white group-hover/floating:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
-
-                    {/* Animated Rotating Glowing Border Outline on Hover */}
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-80 blur-[4px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-
-                    {/* Inner Card Content */}
-                    <div className="relative z-10 w-full h-full rounded-[14.5px] sm:rounded-[22.5px] bg-white/80 hover:bg-white/85 backdrop-blur-xl p-3.5 sm:p-6 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
-                        <span className="font-bold text-brand-700 flex items-center gap-1.5">
-                          <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
-                          JOB TICKET #TK-4409
-                        </span>
-                        <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
-                          <Clock className="w-3 h-3" />
-                          In Progress
-                        </span>
-                      </div>
-
-                      <div className="bg-white/65 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-white/80 shadow-xs text-[11px] sm:text-xs">
-                        <div className="flex items-center justify-between font-bold text-slate-800">
-                          <span>iPhone 13 Display Replacement</span>
-                          <span className="text-brand-700 font-mono">৳ 12,500</span>
-                        </div>
-                        <div className="text-[10px] sm:text-[11px] text-slate-600 mt-1 font-medium">Technician: Tanvir Alam &middot; Counter 2</div>
-                      </div>
-
-                      <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
-                        <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
-                          <Smartphone className="w-3.5 h-3.5" />
-                          <span>Customer SMS Status</span>
-                        </div>
-                        <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto-Delivered</span>
-                      </div>
+                  <div className="bg-white/65 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-white/80 shadow-xs text-[11px] sm:text-xs">
+                    <div className="flex items-center justify-between font-bold text-slate-800">
+                      <span>iPhone 13 Display Replacement</span>
+                      <span className="text-brand-700 font-mono">৳ 12,500</span>
                     </div>
+                    <div className="text-[10px] sm:text-[11px] text-slate-600 mt-1 font-medium">Technician: Tanvir Alam &middot; Counter 2</div>
+                  </div>
+
+                  <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
+                      <Smartphone className="w-3.5 h-3.5" />
+                      <span>Customer SMS Status</span>
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto-Delivered</span>
                   </div>
                 </div>
-
-                {/* Right Column (REVERSED): Text & Features */}
-                <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left order-1 lg:order-2">
-                  <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
-                    {t.cards[1].title}
-                  </h3>
-
-                  <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
-                    {t.cards[1].description}
-                  </p>
-
-                  <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
-                    {t.cards[1].features.map((feat, i) => (
-                      <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
-                        <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
               </div>
+
+              {/* Right Column (REVERSED): Text & Features */}
+              <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left order-1 lg:order-2">
+                <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
+                  {t.cards[1].title}
+                </h3>
+
+                <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
+                  {t.cards[1].description}
+                </p>
+
+                <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
+                  {t.cards[1].features.map((feat, i) => (
+                    <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </div>
 
           {/* STACKED CARD 3: WooCommerce & Online Store Sync (Scroll Triggered) */}
           <div className={`sticky top-28 sm:top-36 z-30 transition-all duration-300 w-full ${isInView ? "animate-module-card-3" : "opacity-0"}`}>
-            <div className="relative p-[2px] rounded-[24px] sm:rounded-[44px] overflow-hidden group cursor-pointer transition-all duration-300 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] hover:shadow-[0_25px_60px_-15px_rgba(112,72,232,0.25)]">
-              {/* Default static border */}
-              <div className="absolute inset-0 rounded-[24px] sm:rounded-[44px] border border-slate-200/90 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
+            <div className="w-full bg-white rounded-[24px] sm:rounded-[44px] border border-slate-200/90 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.1)] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
+              
+              {/* Left Column: Text & Features */}
+              <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left">
+                <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
+                  {t.cards[2].title}
+                </h3>
 
-              {/* Animated Rotating Glowing Border Outline on Hover (Dual Layer: Ambient Glow + Sharp Beam) */}
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-80 blur-[8px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-              <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#8E65FF_360deg)] opacity-0 group-hover:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
+                <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
+                  {t.cards[2].description}
+                </p>
 
-              {/* Inner White Card */}
-              <div className="relative z-10 w-full bg-white rounded-[22px] sm:rounded-[42px] overflow-hidden grid grid-cols-1 lg:grid-cols-2 items-stretch">
-                
-                {/* Left Column: Text & Features */}
-                <div className="p-5 sm:p-12 lg:p-16 flex flex-col justify-center space-y-3 sm:space-y-6 text-left">
-                  <h3 className="text-[18px] sm:text-4xl lg:text-[40px] font-bold text-navy-900 tracking-tight leading-[1.18] transition-all duration-300">
-                    {t.cards[2].title}
-                  </h3>
+                <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
+                  {t.cards[2].features.map((feat, i) => (
+                    <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
+                      <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
+                      <span>{feat}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
 
-                  <p className="text-slate-600 text-[12px] sm:text-lg leading-relaxed max-w-lg transition-all duration-300">
-                    {t.cards[2].description}
-                  </p>
-
-                  <div className="space-y-2 sm:space-y-4 pt-1 sm:pt-2">
-                    {t.cards[2].features.map((feat, i) => (
-                      <div key={i} className="flex items-center gap-2.5 sm:gap-3.5 text-[12px] sm:text-base text-slate-800 font-medium transition-all duration-300">
-                        <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-slate-900 shrink-0 stroke-[2.5]" />
-                        <span>{feat}</span>
-                      </div>
-                    ))}
-                  </div>
+              {/* Right Column: Background adva.png + Floating Purple UI Mockup Card */}
+              <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                  <Image
+                    src="/adva.png"
+                    alt="WooCommerce Sync Background"
+                    fill
+                    className="object-cover object-center"
+                    priority
+                  />
                 </div>
 
-                {/* Right Column: Background adva.png + Floating Purple UI Mockup Card */}
-                <div className="relative min-h-[220px] sm:min-h-[440px] lg:min-h-full flex items-center justify-center p-3.5 sm:p-12 overflow-hidden">
-                  <div className="absolute inset-0 z-0">
-                    <Image
-                      src="/adva.png"
-                      alt="WooCommerce Sync Background"
-                      fill
-                      className="object-cover object-center"
-                      priority
-                    />
+                {/* Floating 2-Way Sync Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
+                    <span className="font-bold text-brand-700 flex items-center gap-1.5">
+                      <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
+                      WOOCOMMERCE LIVE SYNC
+                    </span>
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      2-Way Active
+                    </span>
                   </div>
 
-                  {/* Floating 2-Way Sync Card in Purple Theme (80% Foggy Blur Glassmorphism + Hover Outline Animation) */}
-                  <div className="relative p-[1.5px] rounded-2xl sm:rounded-3xl overflow-hidden group/floating cursor-pointer transition-all duration-300 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_50px_-12px_rgba(112,72,232,0.35)] z-10 w-full max-w-[320px] sm:max-w-[410px]">
-                    {/* Default static border */}
-                    <div className="absolute inset-0 rounded-2xl sm:rounded-3xl border border-white group-hover/floating:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
-
-                    {/* Animated Rotating Glowing Border Outline on Hover */}
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-80 blur-[4px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-                    <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover/floating:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
-
-                    {/* Inner Card Content */}
-                    <div className="relative z-10 w-full h-full rounded-[14.5px] sm:rounded-[22.5px] bg-white/80 hover:bg-white/85 backdrop-blur-xl p-3.5 sm:p-6 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                      <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
-                        <span className="font-bold text-brand-700 flex items-center gap-1.5">
-                          <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
-                          WOOCOMMERCE LIVE SYNC
-                        </span>
-                        <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
-                          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                          2-Way Active
-                        </span>
-                      </div>
-
-                      <div className="grid grid-cols-2 gap-2 text-[11px] sm:text-xs">
-                        <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
-                          <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
-                          <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">OUTLET POS</div>
-                          <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
-                        </div>
-                        <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
-                          <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
-                          <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">ONLINE STORE</div>
-                          <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
-                        </div>
-                      </div>
-
-                      <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
-                        <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
-                          <RefreshCw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
-                          <span>Real-time Orders Ingested</span>
-                        </div>
-                        <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto Synced</span>
-                      </div>
+                  <div className="grid grid-cols-2 gap-2 text-[11px] sm:text-xs">
+                    <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
+                      <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
+                      <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">OUTLET POS</div>
+                      <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
+                    </div>
+                    <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
+                      <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
+                      <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">ONLINE STORE</div>
+                      <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
                     </div>
                   </div>
-                </div>
 
+                  <div className="bg-brand-600 text-white rounded-xl p-2.5 sm:p-3 text-[11px] sm:text-xs flex items-center justify-between shadow-xs">
+                    <div className="flex items-center gap-1.5 font-semibold text-[10px] sm:text-[11px]">
+                      <RefreshCw className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+                      <span>Real-time Orders Ingested</span>
+                    </div>
+                    <span className="text-[9px] sm:text-[10px] bg-white/20 px-1.5 sm:px-2 py-0.5 rounded font-bold">Auto Synced</span>
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
 
