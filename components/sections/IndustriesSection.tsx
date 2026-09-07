@@ -1,57 +1,13 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 import { useInView } from "@/hooks/useInView";
-import {
-  ShoppingBag,
-  Pill,
-  Utensils,
-  Car,
-  Smartphone,
-  Factory,
-  Building2,
-  Truck,
-} from "lucide-react";
 
 export function IndustriesSection() {
   const { language } = useLanguage();
   const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.1, rootMargin: "-30px 0px" });
-
-  const iconConfig: Record<string, { icon: React.ReactNode; bgClass: string }> = {
-    ShoppingBag: {
-      icon: <ShoppingBag className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-brand-600",
-    },
-    Pill: {
-      icon: <Pill className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-teal-600",
-    },
-    Utensils: {
-      icon: <Utensils className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-amber-500",
-    },
-    Car: {
-      icon: <Car className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-blue-600",
-    },
-    Smartphone: {
-      icon: <Smartphone className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-purple-600",
-    },
-    Factory: {
-      icon: <Factory className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-rose-600",
-    },
-    Building2: {
-      icon: <Building2 className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-indigo-600",
-    },
-    Truck: {
-      icon: <Truck className="w-7 h-7 sm:w-8 sm:h-8 text-white stroke-[2]" />,
-      bgClass: "bg-emerald-600",
-    },
-  };
 
   const content = {
     EN: {
@@ -61,42 +17,42 @@ export function IndustriesSection() {
         "Tailored features and workflows calibrated for Bangladesh's most common retail, wholesale, and service sectors.",
       industries: [
         {
-          icon: "ShoppingBag",
+          image: "/Section 6 icons/Grocery.png",
           title: "Grocery Stores & Supershops",
           desc: "Barcode scanning, scale integration, expiry alerts, and multi-counter POS billing.",
         },
         {
-          icon: "Pill",
+          image: "/Section 6 icons/Pharmacies.png",
           title: "Pharmacies & Drugstores",
           desc: "Batch number lookup, expiry tracking, doctor prescription, and license records.",
         },
         {
-          icon: "Utensils",
+          image: "/Section 6 icons/Restaurants.png",
           title: "Restaurants & Bakeries",
           desc: "KOT kitchen display, table order billing, recipe costing, and takeaway parcels.",
         },
         {
-          icon: "Car",
+          image: "/Section 6 icons/Auto Parts.png",
           title: "Auto Parts & Garages",
           desc: "Part serial tracking, vehicle fitment search, mechanic job cards, and invoices.",
         },
         {
-          icon: "Smartphone",
+          image: "/Section 6 icons/Electronics.png",
           title: "Electronics & Repair Shops",
           desc: "IMEI warranty lookup, digital service tickets, technician jobs, and accessories.",
         },
         {
-          icon: "Factory",
+          image: "/Section 6 icons/Manufacturing.png",
           title: "Manufacturing & Wholesale",
           desc: "Raw material buying, batch recipe tracking, bulk carton packing, and credit dues.",
         },
         {
-          icon: "Building2",
+          image: "/Section 6 icons/Multi-Branch.png",
           title: "Multi-Branch Retail Chains",
           desc: "Central catalog, branch stock requisitions, staff access roles, and analytics.",
         },
         {
-          icon: "Truck",
+          image: "/Section 6 icons/Online & Offline Brands.png",
           title: "Online & Offline Brands",
           desc: "WooCommerce store sync, courier parcel tracking, inventory updates, and orders.",
         },
@@ -109,42 +65,42 @@ export function IndustriesSection() {
         "বাংলাদেশের খুচরা দোকান, পাইকারি ব্যবসা ও সার্ভিসিং সেক্টরের বাস্তব চাহিদার সাথে মিলিয়ে বিশেষভাবে তৈরি।",
       industries: [
         {
-          icon: "ShoppingBag",
+          image: "/Section 6 icons/Grocery.png",
           title: "মুদি দোকান ও সুপারশপ",
           desc: "বারকোড স্ক্যানিং, ডিজিটাল ওজন স্কেল সংযোগ, মেয়াদোত্তীর্ণ এলার্ট এবং মাল্টি-কাউন্টার দ্রুত বিলিং।",
         },
         {
-          icon: "Pill",
+          image: "/Section 6 icons/Pharmacies.png",
           title: "ফার্মেসি ও ড্রাগস্টোর",
           desc: "ওষুধের ব্যাচ নম্বর ও মেয়াদ ট্র্যাকিং, ডাক্তারের প্রেসক্রিপশন ভিউ এবং সরকার-নির্ধারিত লাইসেন্স রেকর্ড।",
         },
         {
-          icon: "Utensils",
+          image: "/Section 6 icons/Restaurants.png",
           title: "রেস্টুরেন্ট ও বেকারি",
           desc: "কিচেন KOT ডিসপ্লে, টেবিল অর্ডার ম্যানেজমেন্ট, আইটেম রেসিপি খরচ এবং দ্রুত পার্সেল বিলিং।",
         },
         {
-          icon: "Car",
+          image: "/Section 6 icons/Auto Parts.png",
           title: "অটো পার্টস ও গ্যারেজ",
           desc: "যন্ত্রাংশের সিরিয়াল/SKU ট্র্যাকিং, গাড়ি ফিটমেন্ট সার্চ, মেকানিক জব কার্ড ও সার্ভিস ইনভয়েস।",
         },
         {
-          icon: "Smartphone",
+          image: "/Section 6 icons/Electronics.png",
           title: "ইলেকট্রনিক্স ও মোবাইল শপ",
           desc: "IMEI ও ওয়ারেন্টি সার্চ, ডিজিটাল সার্ভিস টিকিট, টেকনিশিয়ান কাজ এবং এক্সেসরিজ ম্যানেজমেন্ট।",
         },
         {
-          icon: "Factory",
+          image: "/Section 6 icons/Manufacturing.png",
           title: "ম্যানুফ্যাকচারিং ও পাইকারি ব্যবসা",
           desc: "কাঁচামাল ক্রয়, ব্যাচ উৎপাদন রেসিপি (BOM), কার্টুন প্যাকিং এবং পাইকারি বাকির খাতা।",
         },
         {
-          icon: "Building2",
+          image: "/Section 6 icons/Multi-Branch.png",
           title: "মাল্টি-আউটলেট রিটেইল চেইন",
           desc: "সেন্ট্রাল ক্যাটালগ, ইন্টার-ব্রাঞ্চ স্টক রিকুইজিশন, স্টাফ রোল কন্ট্রোল এবং সেন্ট্রাল সেলস রিপোর্ট।",
         },
         {
-          icon: "Truck",
+          image: "/Section 6 icons/Online & Offline Brands.png",
           title: "অনলাইন ও অফলাইন শপ",
           desc: "WooCommerce ওয়েবসাইট সিঙ্ক, কুরিয়ার পার্সেল ট্র্যাকিং, স্বয়ংক্রিয় স্টক আপডেট এবং অর্ডার প্রসেসিং।",
         },
@@ -187,10 +143,6 @@ export function IndustriesSection() {
         {/* 8 Dark Cards Grid with Vibrant Icons & High Contrast (Scroll Triggered - 2 Cards per row on mobile) */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 items-stretch">
           {t.industries.map((ind, idx) => {
-            const config = iconConfig[ind.icon] || {
-              icon: <ShoppingBag className="w-5 h-5 sm:w-8 sm:h-8 text-white" />,
-              bgClass: "bg-brand-600",
-            };
             const animClass = isInView ? `animate-industry-card-${idx + 1}` : "opacity-0";
 
             return (
@@ -199,12 +151,15 @@ export function IndustriesSection() {
                 className={`p-3.5 sm:p-7 rounded-[18px] sm:rounded-3xl border border-slate-800/90 bg-[#12192B]/95 hover:bg-[#16213A] hover:border-brand-500/50 flex flex-col justify-between h-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_-15px_rgba(112,72,232,0.25)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${animClass}`}
               >
                 <div className="flex flex-col flex-1">
-                  {/* Large 4x Scaled Flat Solid Icon Box with Continuous Line Stroke Draw Loop Animation */}
+                  {/* High-Resolution PNG Industry Icon */}
                   <div className="mb-3 sm:mb-6 flex justify-start">
-                    <div
-                      className={`w-10 h-10 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl flex items-center justify-center transition-transform duration-300 group-hover:scale-105 shadow-md icon-stroke-loop ${config.bgClass}`}
-                    >
-                      {config.icon}
+                    <div className="relative w-12 h-12 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] transition-transform duration-300 group-hover:scale-110">
+                      <Image
+                        src={ind.image}
+                        alt={ind.title}
+                        fill
+                        className="object-contain object-left"
+                      />
                     </div>
                   </div>
 
