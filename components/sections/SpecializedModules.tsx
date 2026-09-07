@@ -176,24 +176,24 @@ export function SpecializedModules() {
                   />
                 </div>
 
-                {/* Floating BOM Recipe Card in Purple Theme (Footer Glassmorphic Style) */}
-                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/28 hover:bg-white/38 backdrop-blur-2xl backdrop-saturate-150 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.25),0_0_1px_1px_rgba(255,255,255,0.6),inset_0_1px_1.5px_rgba(255,255,255,0.9)] border border-white/80 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                  <div className="flex items-center justify-between pb-2 border-b border-white/40 text-[11px] sm:text-xs">
+                {/* Floating BOM Recipe Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
                     <span className="font-bold text-brand-700 flex items-center gap-1.5">
                       <Cpu className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
                       BOM RECIPE BUILDER
                     </span>
-                    <span className="bg-brand-50/90 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border border-brand-200/60 shadow-xs">
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full border border-brand-200/60 shadow-xs">
                       Batch #802
                     </span>
                   </div>
 
                   <div className="space-y-1.5 sm:space-y-2 text-[11px] sm:text-xs">
-                    <div className="flex items-center justify-between bg-white/50 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/40 shadow-xs">
+                    <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
                       <span className="text-slate-800 font-medium">Flour (ময়দা) 50kg</span>
                       <span className="text-rose-600 font-bold font-mono">-50.00</span>
                     </div>
-                    <div className="flex items-center justify-between bg-white/50 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/40 shadow-xs">
+                    <div className="flex items-center justify-between bg-white/65 backdrop-blur-md px-2.5 py-1.5 sm:px-3 sm:py-2 rounded-xl border border-white/80 shadow-xs">
                       <span className="text-slate-800 font-medium">Sugar (চিনি) 10kg</span>
                       <span className="text-rose-600 font-bold font-mono">-10.00</span>
                     </div>
@@ -228,20 +228,20 @@ export function SpecializedModules() {
                   />
                 </div>
 
-                {/* Floating Repair Ticket Card in Purple Theme (Footer Glassmorphic Style) */}
-                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/28 hover:bg-white/38 backdrop-blur-2xl backdrop-saturate-150 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.25),0_0_1px_1px_rgba(255,255,255,0.6),inset_0_1px_1.5px_rgba(255,255,255,0.9)] border border-white/80 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                  <div className="flex items-center justify-between pb-2 border-b border-white/40 text-[11px] sm:text-xs">
+                {/* Floating Repair Ticket Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
                     <span className="font-bold text-brand-700 flex items-center gap-1.5">
                       <Wrench className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
                       JOB TICKET #TK-4409
                     </span>
-                    <span className="bg-brand-50/90 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
                       <Clock className="w-3 h-3" />
                       In Progress
                     </span>
                   </div>
 
-                  <div className="bg-white/50 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-white/40 shadow-xs text-[11px] sm:text-xs">
+                  <div className="bg-white/65 backdrop-blur-md p-2.5 sm:p-3.5 rounded-xl border border-white/80 shadow-xs text-[11px] sm:text-xs">
                     <div className="flex items-center justify-between font-bold text-slate-800">
                       <span>iPhone 13 Display Replacement</span>
                       <span className="text-brand-700 font-mono">৳ 12,500</span>
@@ -318,26 +318,26 @@ export function SpecializedModules() {
                   />
                 </div>
 
-                {/* Floating 2-Way Sync Card in Purple Theme (Footer Glassmorphic Style) */}
-                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/28 hover:bg-white/38 backdrop-blur-2xl backdrop-saturate-150 rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_30px_70px_-15px_rgba(0,0,0,0.25),0_0_1px_1px_rgba(255,255,255,0.6),inset_0_1px_1.5px_rgba(255,255,255,0.9)] border border-white/80 transition-all duration-300 space-y-2 sm:space-y-3.5">
-                  <div className="flex items-center justify-between pb-2 border-b border-white/40 text-[11px] sm:text-xs">
+                {/* Floating 2-Way Sync Card in Purple Theme (80% Foggy Blur Glassmorphism) */}
+                <div className="relative z-10 w-full max-w-[320px] sm:max-w-[410px] bg-white/80 hover:bg-white/85 backdrop-blur-xl rounded-2xl sm:rounded-3xl p-3.5 sm:p-6 shadow-[0_25px_50px_-12px_rgba(0,0,0,0.15),0_0_1px_1px_rgba(255,255,255,0.9),inset_0_1px_1.5px_rgba(255,255,255,1)] border border-white transition-all duration-300 space-y-2 sm:space-y-3.5">
+                  <div className="flex items-center justify-between pb-2 border-b border-slate-200/50 text-[11px] sm:text-xs">
                     <span className="font-bold text-brand-700 flex items-center gap-1.5">
                       <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600" />
                       WOOCOMMERCE LIVE SYNC
                     </span>
-                    <span className="bg-brand-50/90 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
+                    <span className="bg-brand-50 text-brand-700 text-[10px] sm:text-[11px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 border border-brand-200/60 shadow-xs">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       2-Way Active
                     </span>
                   </div>
 
                   <div className="grid grid-cols-2 gap-2 text-[11px] sm:text-xs">
-                    <div className="bg-white/50 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/40 shadow-xs text-center">
+                    <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
                       <Store className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
                       <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">OUTLET POS</div>
                       <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
                     </div>
-                    <div className="bg-white/50 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/40 shadow-xs text-center">
+                    <div className="bg-white/65 backdrop-blur-md p-2 sm:p-3 rounded-xl border border-white/80 shadow-xs text-center">
                       <Globe className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-brand-600 mx-auto mb-1" />
                       <div className="text-[9px] sm:text-[10px] text-slate-600 font-semibold">ONLINE STORE</div>
                       <div className="font-bold text-navy-900 mt-0.5">18 Pcs Stock</div>
