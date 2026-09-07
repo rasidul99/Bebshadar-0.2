@@ -35,10 +35,10 @@ export function Hero() {
       headlineLine2: "sales, stock, staff and accounts.",
       subtitleLine1: "Bebshadar brings POS billing, inventory, purchases, and customer dues (baki)",
       subtitleLine2: "into a single dashboard \u2014 so you always know where your business stands.",
-      ctaPrimary: "Start 14-Day Free Trial",
-      ctaSecondary: "Watch 2-Min Demo",
+      ctaPrimary: "Start 14 Day Free Trial",
+      ctaSecondary: "Watch 2 Min Demo",
       trustPoint1: "No credit card required",
-      trustPoint2: "2-min instant setup",
+      trustPoint2: "2 min instant setup",
     },
     BN: {
       headlineLine1: "একটিমাত্র সিস্টেমে চালান পুরো ব্যবসা \u2014",
