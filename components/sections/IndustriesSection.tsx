@@ -180,7 +180,7 @@ export function IndustriesSection() {
             return (
               <div
                 key={idx}
-                className={`p-3.5 sm:p-7 rounded-[18px] sm:rounded-3xl border border-slate-800/90 bg-[#12192B]/95 hover:bg-[#16213A] hover:border-brand-500/50 flex flex-col justify-between h-full shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] hover:shadow-[0_20px_40px_-15px_rgba(112,72,232,0.25)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${animClass}`}
+                className={`p-3.5 sm:p-7 rounded-[18px] sm:rounded-3xl border border-slate-800/90 bg-gradient-to-br from-black from-20% via-[#0B1224] via-65% to-[#16213A] hover:via-[#0F1930] hover:to-[#1D2B4A] hover:border-brand-500/50 flex flex-col justify-between h-full shadow-[0_12px_32px_-10px_rgba(0,0,0,0.7)] hover:shadow-[0_20px_40px_-15px_rgba(112,72,232,0.3)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${animClass}`}
               >
                 <div className="flex flex-col flex-1">
                   {/* High-Resolution PNG Industry Icon (Uniform Height Across All Cards) */}
