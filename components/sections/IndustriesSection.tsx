@@ -180,31 +180,41 @@ export function IndustriesSection() {
             return (
               <div
                 key={idx}
-                className={`p-3.5 sm:p-7 rounded-[18px] sm:rounded-3xl border border-slate-800/90 bg-gradient-to-br from-black from-20% via-[#0B1224] via-65% to-[#16213A] hover:via-[#0F1930] hover:to-[#1D2B4A] hover:border-brand-500/50 flex flex-col justify-between h-full shadow-[0_12px_32px_-10px_rgba(0,0,0,0.7)] hover:shadow-[0_20px_40px_-15px_rgba(112,72,232,0.3)] hover:-translate-y-1 transition-all duration-300 group cursor-pointer ${animClass}`}
+                className={`relative p-[1.5px] rounded-[18px] sm:rounded-3xl overflow-hidden group cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_20px_45px_-12px_rgba(112,72,232,0.35)] flex flex-col justify-between h-full ${animClass}`}
               >
-                <div className="flex flex-col flex-1">
-                  {/* High-Resolution PNG Industry Icon (Uniform Height Across All Cards) */}
-                  <div className="mb-3 sm:mb-6 h-12 sm:h-16 lg:h-[72px] flex items-center justify-start">
-                    <Image
-                      src={ind.image}
-                      alt={ind.title}
-                      width={ind.width}
-                      height={ind.height}
-                      className="h-12 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform duration-300 origin-left group-hover:scale-110"
-                    />
-                  </div>
+                {/* Default static border */}
+                <div className="absolute inset-0 rounded-[18px] sm:rounded-3xl border border-slate-800/90 group-hover:opacity-0 transition-opacity duration-300 pointer-events-none z-10" />
 
-                  {/* Equal-height Title Container */}
-                  <div className="min-h-[40px] sm:min-h-[54px] flex items-start mb-1.5 sm:mb-2.5">
-                    <h3 className="text-[14px] sm:text-xl font-bold text-white tracking-tight leading-[1.25] group-hover:text-brand-300 transition-colors">
-                      {ind.title}
-                    </h3>
-                  </div>
+                {/* Animated Rotating Glowing Border Outline on Hover (Dual Layer: Ambient Glow + Sharp Beam) */}
+                <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover:opacity-80 blur-[6px] animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
+                <div className="absolute inset-[-150%] bg-[conic-gradient(from_0deg,transparent_0deg,transparent_270deg,#7048E8_315deg,#A78BFA_345deg,#FFFFFF_360deg)] opacity-0 group-hover:opacity-100 animate-border-rotate transition-opacity duration-300 pointer-events-none z-0" />
 
-                  {/* Equal-height Description Container */}
-                  <p className="text-slate-400 text-[11px] sm:text-sm leading-relaxed flex-1 transition-all duration-300">
-                    {ind.desc}
-                  </p>
+                {/* Card Body with Cinematic Gradient */}
+                <div className="relative z-10 w-full h-full rounded-[16.5px] sm:rounded-[22.5px] bg-gradient-to-br from-black from-20% via-[#0B1224] via-65% to-[#16213A] group-hover:via-[#0F1930] group-hover:to-[#1D2B4A] p-3.5 sm:p-7 flex flex-col justify-between shadow-[0_12px_32px_-10px_rgba(0,0,0,0.7)] transition-all duration-300">
+                  <div className="flex flex-col flex-1">
+                    {/* High-Resolution PNG Industry Icon (Uniform Height Across All Cards) */}
+                    <div className="mb-3 sm:mb-6 h-12 sm:h-16 lg:h-[72px] flex items-center justify-start">
+                      <Image
+                        src={ind.image}
+                        alt={ind.title}
+                        width={ind.width}
+                        height={ind.height}
+                        className="h-12 sm:h-16 lg:h-[72px] w-auto object-contain transition-transform duration-300 origin-left group-hover:scale-110"
+                      />
+                    </div>
+
+                    {/* Equal-height Title Container */}
+                    <div className="min-h-[40px] sm:min-h-[54px] flex items-start mb-1.5 sm:mb-2.5">
+                      <h3 className="text-[14px] sm:text-xl font-bold text-white tracking-tight leading-[1.25] group-hover:text-brand-300 transition-colors">
+                        {ind.title}
+                      </h3>
+                    </div>
+
+                    {/* Equal-height Description Container */}
+                    <p className="text-slate-400 text-[11px] sm:text-sm leading-relaxed flex-1 transition-all duration-300">
+                      {ind.desc}
+                    </p>
+                  </div>
                 </div>
               </div>
             );

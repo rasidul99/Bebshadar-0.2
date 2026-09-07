@@ -497,6 +497,22 @@ h1, h2, h3, h4, h5, h6 {
   animation: heroDashboardReveal 0.95s cubic-bezier(0.16, 1, 0.3, 1) 0.25s both;
 }
 
+/* ==========================================================================
+   Industry Card Animated Hover Border Rotate Keyframes
+   ========================================================================== */
+@keyframes borderRotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-border-rotate {
+  animation: borderRotate 3.5s linear infinite;
+}
+
 
 
 
