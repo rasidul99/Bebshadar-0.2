@@ -14,6 +14,7 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { Footer } from "@/components/footer/Footer";
+import { BackToTop } from "@/components/ui/BackToTop";
 
 export default function Home() {
   return (
@@ -67,6 +68,9 @@ export default function Home() {
 
       {/* 16. Footer */}
       <Footer />
+
+      {/* 17. Floating Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }
