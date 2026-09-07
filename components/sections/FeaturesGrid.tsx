@@ -100,15 +100,6 @@ export function FeaturesGrid() {
 
   const t = content[language];
 
-  const iconTints = [
-    { bg: "from-brand-500/12 via-white/80 to-brand-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(112,72,232,0.18)]", border: "border-white/90 group-hover:border-brand-300/80" },
-    { bg: "from-emerald-500/12 via-white/80 to-teal-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(16,185,129,0.18)]", border: "border-white/90 group-hover:border-emerald-300/80" },
-    { bg: "from-blue-500/12 via-white/80 to-indigo-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(59,130,246,0.18)]", border: "border-white/90 group-hover:border-blue-300/80" },
-    { bg: "from-amber-500/12 via-white/80 to-yellow-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(245,158,11,0.18)]", border: "border-white/90 group-hover:border-amber-300/80" },
-    { bg: "from-rose-500/12 via-white/80 to-red-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(244,63,94,0.18)]", border: "border-white/90 group-hover:border-rose-300/80" },
-    { bg: "from-purple-500/12 via-white/80 to-pink-500/5", glow: "group-hover:shadow-[0_12px_28px_rgba(168,85,247,0.18)]", border: "border-white/90 group-hover:border-purple-300/80" },
-  ];
-
   return (
     <section ref={ref} id="features" className="py-8 sm:py-28 bg-white border-y border-slate-200/80">
       {/* Exact match to 1152px Navbar pill with max-w-6xl and lg:px-0 on desktop */}
@@ -140,7 +131,6 @@ export function FeaturesGrid() {
           {t.features.map((feature, idx) => {
             const iconPath = section3Icons[idx] || "/Section 3 icon/Checkout-01.svg";
             const animClass = isInView ? `animate-feature-card-${idx + 1}` : "opacity-0";
-            const tint = iconTints[idx % iconTints.length];
 
             return (
               <Card
@@ -148,20 +138,15 @@ export function FeaturesGrid() {
                 hoverEffect
                 className={`p-3.5 sm:p-9 rounded-[20px] sm:rounded-[32px] min-h-[210px] sm:min-h-[280px] flex flex-col justify-start border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 group ${animClass}`}
               >
-                {/* Large Left-Aligned Distinct Vector Icon with Frosted Glassmorphism Box */}
+                {/* Large Left-Aligned Distinct Vector Icon with No Background & Bigger Dimensions */}
                 <div className="mb-3 sm:mb-6 flex justify-start">
-                  <div className={`w-11 h-11 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br ${tint.bg} backdrop-blur-md border ${tint.border} shadow-[0_8px_20px_rgba(0,0,0,0.04)] ${tint.glow} flex items-center justify-center relative overflow-hidden transition-all duration-300 group-hover:scale-105 group-hover:-translate-y-0.5`}>
-                    {/* Top edge glass reflection highlight */}
-                    <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-90" />
-                    
-                    <div className="relative w-6 h-6 sm:w-9 sm:h-9 transition-transform duration-300 group-hover:scale-110">
-                      <Image
-                        src={iconPath}
-                        alt={feature.title}
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
+                  <div className="relative w-9 h-9 sm:w-14 sm:h-14 lg:w-16 lg:h-16 transition-transform duration-300 group-hover:scale-110">
+                    <Image
+                      src={iconPath}
+                      alt={feature.title}
+                      fill
+                      className="object-contain object-left"
+                    />
                   </div>
                 </div>
 
