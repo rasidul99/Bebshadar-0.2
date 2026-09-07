@@ -11,12 +11,12 @@ export function FeaturesGrid() {
   const { ref, isInView } = useInView<HTMLElement>({ threshold: 0.1, rootMargin: "-30px 0px" });
 
   const section3Icons = [
-    "/Section 3 icon/Checkout-01.svg",
-    "/Section 3 icon/Inventory-01.svg",
-    "/Section 3 icon/Ledger-01.svg",
-    "/Section 3 icon/Reminder-01.svg",
-    "/Section 3 icon/Analytics-01.svg",
-    "/Section 3 icon/HRM-01.svg",
+    "/Section 3 icon/pos.png",
+    "/Section 3 icon/Inventory.png",
+    "/Section 3 icon/Purchases.png",
+    "/Section 3 icon/Reminder.png",
+    "/Section 3 icon/Reports.png",
+    "/Section 3 icon/Payroll.png",
   ];
 
   const content = {
@@ -138,9 +138,9 @@ export function FeaturesGrid() {
                 hoverEffect
                 className={`p-3.5 sm:p-9 rounded-[20px] sm:rounded-[32px] min-h-[210px] sm:min-h-[280px] flex flex-col justify-start border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-lg transition-all duration-300 group ${animClass}`}
               >
-                {/* Large Left-Aligned Distinct Vector Icon with No Background & Bigger Dimensions */}
+                {/* Large Left-Aligned High-Resolution PNG Icon */}
                 <div className="mb-3 sm:mb-6 flex justify-start">
-                  <div className="relative w-9 h-9 sm:w-14 sm:h-14 lg:w-16 lg:h-16 transition-transform duration-300 group-hover:scale-110">
+                  <div className="relative w-10 h-10 sm:w-16 sm:h-16 lg:w-[72px] lg:h-[72px] transition-transform duration-300 group-hover:scale-105">
                     <Image
                       src={iconPath}
                       alt={feature.title}
