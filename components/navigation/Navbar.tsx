@@ -135,9 +135,13 @@ export function Navbar() {
           </div>
 
           {/* Desktop Full Logo */}
-          <div className="hidden sm:block relative h-8 sm:h-9 w-32 sm:w-36 transition-transform group-hover:scale-105">
+          <div
+            className={`hidden sm:block relative transition-all duration-300 group-hover:scale-105 ${
+              lang === "EN" ? "h-7 sm:h-8 w-36 sm:w-44" : "h-8 sm:h-9 w-32 sm:w-36"
+            }`}
+          >
             <Image
-              src="/logo-bright-bg.png"
+              src={lang === "EN" ? "/bebshadar-english-logo.svg" : "/logo-bright-bg.png"}
               alt="Bebshadar Logo"
               fill
               className="object-contain object-left"
@@ -234,7 +238,9 @@ export function Navbar() {
                 height={24}
                 className="w-6 h-6 object-contain"
               />
-              <span className="text-sm font-bold text-navy-950 font-sora">ব্যবসাদ্বার</span>
+              <span className="text-sm font-bold text-navy-950 font-sora">
+                {lang === "EN" ? "Bebshadar" : "ব্যবসাদ্বার"}
+              </span>
             </div>
             <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-brand-50 text-brand-700 border border-brand-200/60">
               Cloud POS & ERP

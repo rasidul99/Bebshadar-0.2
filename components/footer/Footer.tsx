@@ -82,9 +82,13 @@ export function Footer() {
           
           {/* Column 1: Brand & Contact Info (lg:col-span-4) */}
           <div className="lg:col-span-4 space-y-4 text-left">
-            <div className="relative h-8 sm:h-9 w-36 sm:w-40">
+            <div
+              className={`relative transition-all duration-300 ${
+                language === "EN" ? "h-7 sm:h-8 w-40 sm:w-48" : "h-8 sm:h-9 w-36 sm:w-40"
+              }`}
+            >
               <Image
-                src="/logo-bright-bg.png"
+                src={language === "EN" ? "/bebshadar-english-logo.svg" : "/logo-bright-bg.png"}
                 alt="Bebshadar Logo"
                 fill
                 className="object-contain object-left"
