@@ -423,7 +423,7 @@ export function PricingSection() {
 
         {/* Highlighted Trust & Stats Banner (Senior UI/UX Redesign: Deep Royal Chromatic Gradient with Layered Lighting & Specular Glass) */}
         <div
-          className={`mt-10 sm:mt-16 rounded-2xl sm:rounded-3xl bg-[linear-gradient(130deg,#151B4C_0%,#231966_32%,#431883_68%,#631E9C_100%)] text-white p-6 sm:p-9 lg:py-10 lg:px-12 shadow-[0_24px_55px_-12px_rgba(21,27,76,0.4),0_0_1px_1px_rgba(255,255,255,0.15),inset_0_1px_1.5px_rgba(255,255,255,0.35)] border border-white/15 relative overflow-hidden transition-all duration-300 hover:shadow-[0_28px_65px_-10px_rgba(99,102,241,0.3)] ${
+          className={`mt-10 sm:mt-16 rounded-2xl sm:rounded-3xl bg-[linear-gradient(130deg,#151B4C_0%,#231966_32%,#431883_68%,#631E9C_100%)] text-white px-6 py-8 sm:px-10 sm:py-11 lg:px-14 lg:py-14 shadow-[0_24px_55px_-12px_rgba(21,27,76,0.4),0_0_1px_1px_rgba(255,255,255,0.15),inset_0_1px_1.5px_rgba(255,255,255,0.35)] border border-white/15 relative overflow-hidden transition-all duration-300 hover:shadow-[0_28px_65px_-10px_rgba(99,102,241,0.3)] ${
             isInView ? "animate-pricing-toggle" : "opacity-0"
           }`}
         >
@@ -482,8 +482,8 @@ export function PricingSection() {
                   key={idx}
                   className={`text-left flex flex-col justify-start group/stat ${borderStyles[idx] || ""}`}
                 >
-                  {/* Stat Number with Subtle Specular Gradient */}
-                  <div className="text-[24px] sm:text-3xl lg:text-[40px] font-black tracking-tight leading-none mb-1.5 sm:mb-2.5 bg-gradient-to-b from-white via-white to-white/85 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover/stat:scale-[1.02] origin-left">
+                  {/* Stat Number with Headroom for Ascenders/Matras to prevent clipping */}
+                  <div className="text-[26px] sm:text-3xl lg:text-[40px] font-black tracking-tight leading-[1.25] pt-1.5 sm:pt-2 pb-1 mb-1 sm:mb-2 bg-gradient-to-b from-white via-white to-white/90 bg-clip-text text-transparent drop-shadow-[0_2px_8px_rgba(0,0,0,0.25)] transition-transform duration-300 group-hover/stat:scale-[1.02] origin-left">
                     {item.stat}
                   </div>
                   {/* Description with High-Legibility Contrast */}
