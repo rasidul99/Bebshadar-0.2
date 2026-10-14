@@ -322,7 +322,7 @@ export const PRICING_PLANS = [
     price: "1,499",
     billingPeriod: "/ month",
     popular: false,
-    ctaText: "Start 14-Day Free Trial",
+    ctaText: "Start 7-Day Free Trial",
     features: [
       "1 Business Location / Branch",
       "Unlimited POS Billing & Invoices",
@@ -341,7 +341,7 @@ export const PRICING_PLANS = [
     billingPeriod: "/ month",
     popular: true,
     badge: "Most Popular",
-    ctaText: "Start 14-Day Free Trial",
+    ctaText: "Start 7-Day Free Trial",
     features: [
       "Everything in Starter, plus:",
       "Up to 5 Outlets & Warehouses",

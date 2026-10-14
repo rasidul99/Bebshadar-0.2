@@ -17,7 +17,7 @@ export function FinalCta() {
       eyebrow: "Ready to scale your business?",
       title: "Ready to run your business the easy, automated way?",
       subtitle:
-        "Start your 14-day free trial today. No credit card required, instant setup, and dedicated onboarding support.",
+        "Start your 7-day free trial today. No credit card required, instant setup, and dedicated onboarding support.",
       ctaText: "Start Free Trial",
       trust1: "Instant cloud access",
       trust2: "Free phone & remote training",
@@ -27,7 +27,7 @@ export function FinalCta() {
       eyebrow: "ব্যবসা বড় করতে প্রস্তুত?",
       title: "আপনার ব্যবসাকে কি অটোমেটেড ও সহজ করতে প্রস্তুত?",
       subtitle:
-        "আজই শুরু করুন ১৪ দিনের ফ্রি ট্রায়াল। কোনো কার্ড লাগবে না, তাৎক্ষণিক সেটআপ এবং আমাদের সার্বক্ষণিক সাপোর্ট।",
+        "আজই শুরু করুন ৭ দিনের ফ্রি ট্রায়াল। কোনো কার্ড লাগবে না, তাৎক্ষণিক সেটআপ এবং আমাদের সার্বক্ষণিক সাপোর্ট।",
       ctaText: "ফ্রি ট্রায়াল শুরু করুন",
       trust1: "ইনস্ট্যান্ট ক্লাউড এক্সেস",
       trust2: "ফ্রি ফোন ও রিমোট ট্রেনিং",

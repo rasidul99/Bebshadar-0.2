@@ -39,7 +39,7 @@ export function PricingSection() {
           tagline: "Single-shop retail & fast billing",
           price: "1,499",
           popular: false,
-          ctaText: "Start 14-Day Free Trial",
+          ctaText: "Start 7-Day Free Trial",
           features: [
             "1 Business Location / Branch",
             "Unlimited POS Billing & Invoices",
@@ -57,7 +57,7 @@ export function PricingSection() {
           price: "2,999",
           popular: true,
           badge: "Most Popular",
-          ctaText: "Start 14-Day Free Trial",
+          ctaText: "Start 7-Day Free Trial",
           features: [
             "Everything in Starter, plus:",
             "Up to 5 Outlets & Warehouses",
@@ -89,7 +89,7 @@ export function PricingSection() {
       ],
       assurances: [
         { stat: "#1", desc: "Top-rated cloud POS & ERP platform for modern retail businesses" },
-        { stat: "14 Days", desc: "Full-access free trial with zero payment card required" },
+        { stat: "7 Days", desc: "Full-access free trial with zero payment card required" },
         { stat: "৳ 0", desc: "Zero setup cost & no hidden surprise fees" },
         { stat: "24/7", desc: "Dedicated phone, WhatsApp & remote support team" },
       ],
@@ -112,7 +112,7 @@ export function PricingSection() {
           tagline: "একক দোকান ও দ্রুত বিলিংয়ের জন্য",
           price: "১,৪৯৯",
           popular: false,
-          ctaText: "১৪ দিনের ফ্রি ট্রায়াল শুরু করুন",
+          ctaText: "৭ দিনের ফ্রি ট্রায়াল শুরু করুন",
           features: [
             "১টি বিজনেস লোকেশন / ব্রাঞ্চ",
             "আনলিমিটেড POS বিলিং ও ইনভয়েস",
@@ -130,7 +130,7 @@ export function PricingSection() {
           price: "২,৯৯৯",
           popular: true,
           badge: "সর্বাধিক জনপ্রিয়",
-          ctaText: "১৪ দিনের ফ্রি ট্রায়াল শুরু করুন",
+          ctaText: "৭ দিনের ফ্রি ট্রায়াল শুরু করুন",
           features: [
             "স্টার্টার প্যাকেজের সব ফিচার, এবং সাথে:",
             "৫টি পর্যন্ত আউটলেট ও গোডাউন",
@@ -162,7 +162,7 @@ export function PricingSection() {
       ],
       assurances: [
         { stat: "#১", desc: "বাংলাদেশের রিটেইল ব্যবসার শীর্ষস্থানীয় ক্লাউড পিওএস প্ল্যাটফর্ম" },
-        { stat: "১৪ দিন", desc: "সম্পূর্ণ ফ্রি ট্রায়াল, কোনো কার্ড বা অগ্রিম পেমেন্ট নেই" },
+        { stat: "৭ দিন", desc: "সম্পূর্ণ ফ্রি ট্রায়াল, কোনো কার্ড বা অগ্রিম পেমেন্ট নেই" },
         { stat: "০ টাকা", desc: "জিরো সেটআপ ফি এবং কোনো গোপন বা বাড়তি চার্জ নেই" },
         { stat: "২৪/৭", desc: "সার্বক্ষণিক ডেডিকেটেড ফোন ও রিমোট টেকনিক্যাল সাপোর্ট" },
       ],

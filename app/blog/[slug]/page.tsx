@@ -70,8 +70,8 @@ export default function BlogDetailPage({
       authorBadge: "Author",
       ctaTitle: "Ready to scale and automate your business?",
       ctaSubtitle:
-        "Join 17,000+ business owners across Bangladesh. Start your 14-day free trial today with instant setup.",
-      ctaBtn: "Start 14-Day Free Trial",
+        "Join 17,000+ business owners across Bangladesh. Start your 7-day free trial today with instant setup.",
+      ctaBtn: "Start 7-Day Free Trial",
       relatedTitle: "More Articles & Guides",
       relatedSubtitle: "Explore other operational strategies and retail growth tips.",
     },
@@ -85,8 +85,8 @@ export default function BlogDetailPage({
       authorBadge: "লেখক",
       ctaTitle: "আপনার ব্যবসাকে কি অটোমেটেড ও সহজ করতে প্রস্তুত?",
       ctaSubtitle:
-        "বাংলাদেশের ১৭,০০০+ সফল উদ্যোক্তার সাথে যুক্ত হোন। আজই কোনো কার্ড ছাড়াই শুরু করুন ১৪ দিনের ফ্রি ট্রায়াল।",
-      ctaBtn: "১৪ দিনের ফ্রি ট্রায়াল শুরু করুন",
+        "বাংলাদেশের ১৭,০০০+ সফল উদ্যোক্তার সাথে যুক্ত হোন। আজই কোনো কার্ড ছাড়াই শুরু করুন ৭ দিনের ফ্রি ট্রায়াল।",
+      ctaBtn: "৭ দিনের ফ্রি ট্রায়াল শুরু করুন",
       relatedTitle: "আরও দরকারি আর্টিকেল ও গাইড",
       relatedSubtitle: "ব্যবসা পরিচালনা ও বৃদ্ধির অন্যান্য সেরা কৌশলগুলো পড়ুন।",
     },

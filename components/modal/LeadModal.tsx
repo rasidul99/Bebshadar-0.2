@@ -51,8 +51,8 @@ export function LeadModal() {
 
   const content = {
     EN: {
-      eyebrow: "14-Day Free Trial",
-      title: "Start your 14-day free trial today",
+      eyebrow: "7-Day Free Trial",
+      title: "Start your 7-day free trial today",
       subtitle:
         "No credit card required. Fill out the quick details below and our team will activate your shop instantly.",
       nameLabel: "Name",
@@ -69,8 +69,8 @@ export function LeadModal() {
       closeBtn: "Close",
     },
     BN: {
-      eyebrow: "১৪ দিনের ফ্রি ট্রায়াল",
-      title: "আজই শুরু করুন আপনার ১৪ দিনের ফ্রি ট্রায়াল",
+      eyebrow: "৭ দিনের ফ্রি ট্রায়াল",
+      title: "আজই শুরু করুন আপনার ৭ দিনের ফ্রি ট্রায়াল",
       subtitle:
         "কোনো ক্রেডিট কার্ডের প্রয়োজন নেই। নিচের তথ্যগুলো পূরণ করুন, আমাদের প্রতিনিধি সাথে সাথেই আপনার শপ অ্যাক্টিভ করে দেবে।",
       nameLabel: "আপনার নাম",

@@ -35,20 +35,18 @@ export function Hero() {
       headlineLine2: "sales, stock, staff and accounts.",
       subtitleLine1: "Bebshadar brings POS billing, inventory, purchases, and customer dues (baki)",
       subtitleLine2: "into a single dashboard \u2014 so you always know where your business stands.",
-      ctaPrimary: "Start 14 Day Free Trial",
+      ctaPrimary: "Start 7 Day Free Trial",
       ctaSecondary: "Watch 2 Min Demo",
       trustPoint1: "No credit card required",
-      trustPoint2: "2 min instant setup",
     },
     BN: {
       headlineLine1: "একটিমাত্র সিস্টেমে চালান পুরো ব্যবসা \u2014",
       headlineLine2: "বিক্রি, স্টক, কর্মচারী ও বাকির হিসাব।",
       subtitleLine1: "ব্যবসার পিওএস বিলিং, ইনভেন্টরি, কেনাকাটা ও কাস্টমার বাকির হিসাব রাখুন এক ড্যাশবোর্ডে",
       subtitleLine2: "যাতে যেকোনো সময় নির্ভুলভাবে জানতে পারেন আপনার ব্যবসার সার্বিক অবস্থান।",
-      ctaPrimary: "১৪ দিনের ফ্রি ট্রায়াল শুরু করুন",
+      ctaPrimary: "৭ দিনের ফ্রি ট্রায়াল শুরু করুন",
       ctaSecondary: "২ মিনিটের ডেমো দেখুন",
       trustPoint1: "কোনো ক্রেডিট কার্ড প্রয়োজন নেই",
-      trustPoint2: "২ মিনিটে ফ্রি সেটআপ",
     },
   };
 
@@ -110,19 +108,13 @@ export function Hero() {
             </a>
           </div>
 
-          {/* Trust & Friction-Reducer Micro-Badges (Two Points with Individual Green Checkmarks) */}
-          <div className="flex flex-wrap items-center justify-center gap-3.5 sm:gap-6 text-[12px] sm:text-[13px] text-slate-500 font-medium select-none animate-hero-fade-3 pt-1">
+          {/* Trust & Friction-Reducer Micro-Badge (Single Highlighted Point) */}
+          <div className="flex items-center justify-center text-[12px] sm:text-[13px] text-slate-500 font-medium select-none animate-hero-fade-3 pt-1">
             <div className="flex items-center gap-1.5">
               <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
                 <Check className="w-2.5 h-2.5 stroke-[3]" />
               </span>
               <span>{t.trustPoint1}</span>
-            </div>
-            <div className="flex items-center gap-1.5">
-              <span className="w-4 h-4 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center shrink-0">
-                <Check className="w-2.5 h-2.5 stroke-[3]" />
-              </span>
-              <span>{t.trustPoint2}</span>
             </div>
           </div>
         </div>
