@@ -159,10 +159,10 @@ export function Navbar() {
                 key={item.label}
                 href={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-medium font-sora transition-all ${
+                className={`px-3.5 py-1.5 rounded-full text-xs sm:text-sm font-semibold font-sora transition-all tracking-tight ${
                   isActive
                     ? "bg-slate-100 text-navy-950 font-bold"
-                    : "text-slate-600 hover:text-navy-950 hover:bg-slate-50"
+                    : "text-slate-800 hover:text-navy-950 hover:bg-slate-100/70"
                 }`}
               >
                 {item.label}
@@ -257,10 +257,10 @@ export function Navbar() {
                   key={item.label}
                   href={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className={`px-4 py-3 rounded-2xl text-sm font-semibold font-sora transition-all flex items-center justify-between group cursor-pointer ${
+                  className={`px-4 py-3 rounded-2xl text-sm font-bold font-sora transition-all flex items-center justify-between group cursor-pointer ${
                     isActive
                       ? "bg-brand-50 text-brand-700 font-bold border border-brand-200/70"
-                      : "text-slate-700 hover:text-navy-950 hover:bg-slate-100/80"
+                      : "text-slate-800 hover:text-navy-950 hover:bg-slate-100/80"
                   }`}
                 >
                   <span>{item.label}</span>
