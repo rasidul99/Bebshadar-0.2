@@ -4,8 +4,8 @@ export const SITE_CONFIG = {
   description:
     "The all-in-one retail management platform for Bangladesh — instant POS billing, live multi-branch inventory, supplier ledger, automated customer dues (baki) recovery, manufacturing recipes, and repair ticketing in one unified cloud system.",
   domain: "bebshadar.com",
-  phone: "+880 1700-000000",
-  email: "support@bebshadar.com",
+  phone: "+8801894-733928",
+  email: "bebshadar.info@gmail.com",
   address: "Dhaka, Bangladesh",
   socials: {
     facebook: "https://facebook.com/bebshadar",

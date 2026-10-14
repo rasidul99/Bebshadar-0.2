@@ -30,7 +30,7 @@ export function ContactSection() {
       eyebrow: "Let's Connect",
       title: "Let’s level up your business, together",
       reachPrefix: "You can reach us anytime via",
-      email: "hello@bebshadar.com",
+      email: "bebshadar.info@gmail.com",
       description:
         "Fill out the quick form and our business advisor will reach out within minutes to help you setup your POS & inventory system.",
       nameLabel: "Name",
@@ -52,7 +52,7 @@ export function ContactSection() {
       eyebrow: "যোগাযোগ করুন",
       title: "একসাথে আপনার ব্যবসাকে নিয়ে চলুন নতুন উচ্চতায়",
       reachPrefix: "যেকোনো প্রয়োজনে সরাসরি আমাদের ইমেইল করতে পারেন:",
-      email: "hello@bebshadar.com",
+      email: "bebshadar.info@gmail.com",
       description:
         "নিচের তথ্যগুলো পূরণ করুন, আমাদের বিজনেস কনসালটেন্ট দ্রুত আপনার সাথে যোগাযোগ করে সম্পূর্ণ ফ্রিতে ডেমো ও সেটআপে সাহায্য করবেন।",
       nameLabel: "আপনার নাম",

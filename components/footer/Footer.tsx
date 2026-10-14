@@ -102,24 +102,24 @@ export function Footer() {
             {/* Direct Contact Phone & Email matching User Screenshot */}
             <div className="pt-2 space-y-2.5">
               <a
-                href="tel:+8809649964949"
+                href="tel:+8801894733928"
                 className="inline-flex items-center gap-3 text-navy-950 hover:text-brand-700 font-semibold text-sm sm:text-[15px] transition-colors group cursor-pointer"
               >
                 <div className="w-8 h-8 rounded-full bg-white/80 border border-slate-200/80 flex items-center justify-center text-brand-600 shadow-2xs group-hover:scale-105 transition-transform">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>+8809649964949</span>
+                <span>+8801894-733928</span>
               </a>
 
               <div className="flex items-center">
                 <a
-                  href="mailto:hello@bebshadar.com"
+                  href="mailto:bebshadar.info@gmail.com"
                   className="inline-flex items-center gap-3 text-navy-950 hover:text-brand-700 font-semibold text-sm sm:text-[15px] transition-colors group cursor-pointer"
                 >
                   <div className="w-8 h-8 rounded-full bg-white/80 border border-slate-200/80 flex items-center justify-center text-brand-600 shadow-2xs group-hover:scale-105 transition-transform">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <span>hello@bebshadar.com</span>
+                  <span>bebshadar.info@gmail.com</span>
                 </a>
               </div>
             </div>
@@ -195,13 +195,13 @@ export function Footer() {
                 </a>
               </li>
               <li>
-                <a href="tel:+8809649964949" className="hover:text-navy-950 transition-colors font-semibold text-navy-950">
-                  +8809649964949
+                <a href="tel:+8801894733928" className="hover:text-navy-950 transition-colors font-semibold text-navy-950">
+                  +8801894-733928
                 </a>
               </li>
               <li>
-                <a href="mailto:hello@bebshadar.com" className="hover:text-navy-950 transition-colors font-semibold text-navy-950">
-                  hello@bebshadar.com
+                <a href="mailto:bebshadar.info@gmail.com" className="hover:text-navy-950 transition-colors font-semibold text-navy-950">
+                  bebshadar.info@gmail.com
                 </a>
               </li>
               <li>
